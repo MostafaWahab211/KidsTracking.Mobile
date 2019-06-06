@@ -11,6 +11,7 @@
         <Label Text="{Binding Item.Age}" FontSize="Small"/>
         <Label Text="Phone:" FontSize="Medium"/>
         <Label Text="{Binding Item.Phone}" FontSize="Medium/"/>
+        
     </StackLayout>
     
 </ContentPage>

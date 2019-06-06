@@ -9,7 +9,6 @@ namespace KidsTracking.Mobile.Models
         Profile,
         Kids,
         Call,
-        Location,
         Camera,
         ConnectUs,
         About

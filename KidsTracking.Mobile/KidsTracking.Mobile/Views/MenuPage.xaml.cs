@@ -24,7 +24,6 @@ namespace KidsTracking.Mobile.Views
                 new HomeMenuItem {Id = MenuItemType.Profile, Title="Profile" },
                 new HomeMenuItem {Id = MenuItemType.Kids, Title="Kids" },
                 new HomeMenuItem {Id = MenuItemType.Call, Title="Call" },
-                new HomeMenuItem {Id = MenuItemType.Location, Title="Location" },
                 new HomeMenuItem {Id = MenuItemType.Camera, Title="Camera" },
                 new HomeMenuItem {Id = MenuItemType.ConnectUs, Title="Connect Us" },
                 new HomeMenuItem {Id = MenuItemType.About, Title="About Us" }

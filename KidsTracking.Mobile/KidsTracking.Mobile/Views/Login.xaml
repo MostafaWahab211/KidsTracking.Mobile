@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KidsTracking.Mobile.Views.Login">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            
+<Label Text="Email Address" />
+<Entry Placeholder=""  />
+            
+<Label Text="Password" />
+<Entry Placeholder="" IsPassword="True" />
+            <Button Text="Login" HorizontalOptions="Center"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Label Text="If You Don't Have Account ?"/>
+                <Label Text="Creat Account" HorizontalOptions="Center" TextColor="Blue"  />
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

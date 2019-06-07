@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KidsTracking.Mobile.Android
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KidsTracking.Mobile.iOS", "KidsTracking.Mobile\KidsTracking.Mobile.iOS\KidsTracking.Mobile.iOS.csproj", "{7D2495D9-8751-4FE7-9587-DD3062DCECD6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KidsTracking.Mobile", "KidsTracking.Mobile\KidsTracking.Mobile\KidsTracking.Mobile.csproj", "{4A2EDFA5-8FEC-4BC8-9B8A-4E14D463F3AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KidsTracking.Mobile", "KidsTracking.Mobile\KidsTracking.Mobile\KidsTracking.Mobile.csproj", "{4A2EDFA5-8FEC-4BC8-9B8A-4E14D463F3AA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

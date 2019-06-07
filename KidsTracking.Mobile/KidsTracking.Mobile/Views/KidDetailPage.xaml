@@ -4,6 +4,7 @@
              x:Class="KidsTracking.Mobile.Views.KidDetailPage"
              Title="{Binding Title}">
 
+    <Grid x:Name="grid">
     <StackLayout Spacing="20" Padding="15">
         <Label Text="Name:" FontSize="Medium" />
         <Label Text="{Binding Item.Name}" FontSize="Small"/>
@@ -11,7 +12,8 @@
         <Label Text="{Binding Item.Age}" FontSize="Small"/>
         <Label Text="Phone:" FontSize="Medium"/>
         <Label Text="{Binding Item.Phone}" FontSize="Medium/"/>
-        
-    </StackLayout>
-    
+            <Button Text="Call" Clicked="Button_Clicked"/>
+            <Button Text="Take a photo"/>
+        </StackLayout>
+    </Grid>
 </ContentPage>

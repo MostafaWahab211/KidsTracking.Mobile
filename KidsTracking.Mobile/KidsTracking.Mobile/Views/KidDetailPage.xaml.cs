@@ -15,9 +15,9 @@ namespace KidsTracking.Mobile.Views
     [DesignTimeVisible(true)]
     public partial class KidDetailPage : ContentPage
     {
-        ItemDetailViewModel viewModel;
+        KidDetailViewModel viewModel;
 
-        public KidDetailPage(ItemDetailViewModel viewModel)
+        public KidDetailPage(KidDetailViewModel viewModel)
         {
             InitializeComponent();
 
@@ -34,7 +34,7 @@ namespace KidsTracking.Mobile.Views
             };
             var stack = new StackLayout { Spacing = 0 };
             stack.Children.Add(map);
-            Content = stack;
+            grid.Children.Add(stack);
             var pin = new Pin
             {
                 Type = PinType.Place,
@@ -54,8 +54,13 @@ namespace KidsTracking.Mobile.Views
                 Phone = "This is an item description."
             };
 
-            viewModel = new ItemDetailViewModel(item);
+            viewModel = new KidDetailViewModel(item);
             BindingContext = viewModel;
+        }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            Xamarin.Essentials.PhoneDialer.Open(viewModel.Item.Phone);
         }
     }
 }

@@ -34,7 +34,7 @@ namespace KidsTracking.Mobile.Views
             if (item == null)
                 return;
 
-            await Navigation.PushAsync(new KidDetailPage(new ItemDetailViewModel(item)));
+            await Navigation.PushAsync(new KidDetailPage(new KidDetailViewModel(item)));
 
             // Manually deselect item.
             ItemsListView.SelectedItem = null;

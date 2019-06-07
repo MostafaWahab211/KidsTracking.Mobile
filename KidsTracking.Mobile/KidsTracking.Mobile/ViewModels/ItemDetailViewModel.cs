@@ -4,10 +4,10 @@ using KidsTracking.Mobile.Models;
 
 namespace KidsTracking.Mobile.ViewModels
 {
-    public class ItemDetailViewModel : BaseViewModel
+    public class KidDetailViewModel : BaseViewModel
     {
         public Kid Item { get; set; }
-        public ItemDetailViewModel(Kid item = null)
+        public KidDetailViewModel(Kid item = null)
         {
             Title = item?.Name;
             Item = item;

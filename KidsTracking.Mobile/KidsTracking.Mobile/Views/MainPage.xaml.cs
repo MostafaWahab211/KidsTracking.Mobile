@@ -19,6 +19,7 @@ namespace KidsTracking.Mobile.Views
             InitializeComponent();
 
             MasterBehavior = MasterBehavior.Popover;
+            
 
             MenuPages.Add((int)MenuItemType.Profile, (NavigationPage)Detail);
         }
@@ -29,8 +30,11 @@ namespace KidsTracking.Mobile.Views
             {
                 switch (id)
                 {
-                    case (int)MenuItemType.Profile:
+                    case (int)MenuItemType.Kids:
                         MenuPages.Add(id, new NavigationPage(new KidsPage()));
+                        break;
+                    case (int)MenuItemType.Profile:
+                        MenuPages.Add(id, new NavigationPage(new Profile()));
                         break;
                     case (int)MenuItemType.About:
                         MenuPages.Add(id, new NavigationPage(new AboutPage()));

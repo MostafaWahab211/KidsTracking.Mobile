@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "954174849769",
+    "firebase_url": "https://kid-traking.firebaseio.com",
+    "project_id": "kid-traking",
+    "storage_bucket": "kid-traking.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:954174849769:android:79f47e1149cdb756",
+        "android_client_info": {
+          "package_name": "com.companyname.KidsTracking.Mobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "954174849769-m0rrr7fhfj83ldnhanp5kisrgfpgarsi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvG5BuTvSPajAErnczWF_3Gx4TzCGEMq0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "954174849769-m0rrr7fhfj83ldnhanp5kisrgfpgarsi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:954174849769:android:f16bbbc72708abee",
+        "android_client_info": {
+          "package_name": "com.companyname.ParentEyes.KidsTracking.Watch"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "954174849769-m0rrr7fhfj83ldnhanp5kisrgfpgarsi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvG5BuTvSPajAErnczWF_3Gx4TzCGEMq0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "954174849769-m0rrr7fhfj83ldnhanp5kisrgfpgarsi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

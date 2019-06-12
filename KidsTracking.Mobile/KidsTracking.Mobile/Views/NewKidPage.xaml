@@ -12,12 +12,16 @@
     <ContentPage.Content>
         <StackLayout Spacing="20" Padding="15">
             <Label Text="Name" FontSize="Medium" />
-            <Entry Text="{Binding Item.Name}" FontSize="Small" />
+            <Entry Text="{Binding Item.Name, Mode=TwoWay}" FontSize="Small" />
             <Label Text="Phone" FontSize="Medium" />
-            <Editor Text="{Binding Item.Phone}" FontSize="Small" Margin="0" />
+            <Editor Text="{Binding Item.Phone, Mode=TwoWay}" FontSize="Small" Margin="0" />
             <Label Text="Age" FontSize="Mediam"/>
-            <Editor Text="{Binding Item.Age}" FontSize="Small"/>
+            <Editor Text="{Binding Item.Age, Mode=TwoWay}" FontSize="Small"/>
             
+            <Label Text="Email" FontSize="Small" />
+            <Editor Text="{Binding Item.Email, Mode=TwoWay}" FontSize="Small"/>
+            <Label Text="Password" FontSize="Medium" />
+            <Editor Text="{Binding Item.Password, Mode=TwoWay}" FontSize="Small"/>
 
         </StackLayout>
     </ContentPage.Content>

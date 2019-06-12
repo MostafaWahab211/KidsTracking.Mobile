@@ -7,6 +7,7 @@ using Xamarin.Forms;
 
 using KidsTracking.Mobile.Models;
 using KidsTracking.Mobile.Views;
+using System.Net;
 
 namespace KidsTracking.Mobile.ViewModels
 {
@@ -39,7 +40,14 @@ namespace KidsTracking.Mobile.ViewModels
             try
             {
                 Kids.Clear();
-                var items = await DataStore.GetItemsAsync(true);
+                WebRequest request = WebRequest.Create("http//:kidstracking.azurewebsites.net/api/parent/GetAllKids");
+                request.Headers.Add(HttpRequestHeader.Authorization, Xamarin.Essentials.Preferences.Get("token", ""));
+                WebResponse response = request.GetResponse();
+                System.IO.Stream stream = response.GetResponseStream();
+                byte[] data = new byte[(int)stream.Length];
+                stream.Read(data, 0, (int)stream.Length);
+                string Json = System.Text.Encoding.UTF8.GetString(data);
+                var items = Newtonsoft.Json.JsonConvert.DeserializeObject<System.Collections.Generic.IEnumerable<Kid>>(Json);
                 foreach (var item in items)
                 {
                     Kids.Add(item);

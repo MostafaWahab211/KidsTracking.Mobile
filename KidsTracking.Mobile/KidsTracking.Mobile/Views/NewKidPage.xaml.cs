@@ -6,6 +6,9 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 using KidsTracking.Mobile.Models;
+using KidsTracking.Mobile.ViewModels;
+using System.Net;
+using System.IO;
 
 namespace KidsTracking.Mobile.Views
 {
@@ -14,7 +17,7 @@ namespace KidsTracking.Mobile.Views
     [DesignTimeVisible(true)]
     public partial class NewKidPage : ContentPage
     {
-        public Kid Item { get; set; }
+        public NewKidViewModel Item { get; set; }
 
         public NewKidPage()
         {
@@ -26,12 +29,23 @@ namespace KidsTracking.Mobile.Views
             //    Description = "This is an item description."
             //};
 
-            BindingContext = this;
+            BindingContext = Item;
         }
 
         async void Save_Clicked(object sender, EventArgs e)
         {
-            MessagingCenter.Send(this, "AddItem", Item);
+            //MessagingCenter.Send(this, "AddItem", Item);
+            string Json = Newtonsoft.Json.JsonConvert.SerializeObject(Item);
+            byte[] data = System.Text.Encoding.UTF8.GetBytes(Json);
+            WebRequest request = WebRequest.Create("http://kidstracking.azurewebsites.net/Kid/Register");
+            WebHeaderCollection webHeader = new WebHeaderCollection();
+            request.ContentType ="application/Json";
+            request.Headers.Add(HttpRequestHeader.Authorization, Xamarin.Essentials.Preferences.Get("token", ""));
+            Stream stream = request.GetRequestStream();
+            StreamWriter writer = new StreamWriter(stream);
+            writer.Write(Json);
+            writer.Close();
+            WebResponse response = request.GetResponse();
             await Navigation.PopModalAsync();
         }
 

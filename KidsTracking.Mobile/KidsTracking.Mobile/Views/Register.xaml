@@ -4,22 +4,21 @@
              x:Class="KidsTracking.Mobile.Views.Register">
     <ContentPage.Content>
         <StackLayout Padding="10">
-            <Label Text="First Name" /> 
-            <Entry Placeholder="" />
 
-            <Label Text="Last Name" />
-            <Entry Placeholder="" />
-            
             <Label Text="Phone Number" />
-            <Entry Placeholder="" />
+            <Entry Placeholder="" Text="{Binding ViewMode.Phone, Mode=TwoWay}"/>
 
-            <Label Text="Email Address" />
-            <Entry Placeholder="" />
+            <Label Text="Email"/>
+            <Entry Text="{Binding ViewMode.Email, Mode=TwoWay}" />
+
+            <Label Text="UserName" />
+            <Entry Placeholder="" Text="{Binding ViewMode.UserName, Mode=TwoWay}" />
             
             <Label Text="Password" />
-            <Entry Placeholder="" />
+            <Entry Placeholder="" IsPassword="True" Text="{Binding ViewMode.Password, Mode=TwoWay}"/>
 
-            <Button Text="Regest" HorizontalOptions="CenterAndExpand"/>
+            <Button Text="Register" HorizontalOptions="CenterAndExpand" Clicked="Button_ClickedAsync"/>
+            <Label x:Name="error"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

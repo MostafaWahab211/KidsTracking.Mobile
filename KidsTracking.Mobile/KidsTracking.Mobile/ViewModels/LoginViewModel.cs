@@ -4,10 +4,11 @@ using System.Text;
 
 namespace KidsTracking.Mobile.ViewModels
 {
-    public class ProfileViewModel
+    public class LoginViewModel
     {
-        public string Name { get; set; }
         public string Email { get; set; }
-        public string Phone { get; set; }
+        public string Password { get; set; }
+        public string grant_type = "password";
+        public string token { get; set; }
     }
 }
